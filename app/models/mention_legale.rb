@@ -1,0 +1,2 @@
+class MentionLegale < ApplicationRecord
+end
