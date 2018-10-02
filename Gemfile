@@ -1,13 +1,18 @@
 source 'https://rubygems.org'
 ruby '2.4.3'
 
-
+gem 'figaro'
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.1.6'
 gem 'redis'
+gem 'activeadmin'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'cloudinary'
+
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
