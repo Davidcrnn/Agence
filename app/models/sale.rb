@@ -8,5 +8,5 @@ class Sale < ApplicationRecord
   validates :visible, inclusion: {in: [true, false] }
   has_many :images, :dependent => :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
-  # mount_uploader :photo, PhotoUploader
+  mount_uploader :photo, PhotoUploader
 end

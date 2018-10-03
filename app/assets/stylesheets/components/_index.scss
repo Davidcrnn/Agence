@@ -1,3 +1,31 @@
 // Import your components CSS files here.
 @import "alert";
 @import "navbar";
+@import "banner";
+@import 'agence_description';
+@import 'footer';
+@import 'annonces_top';
+@import 'mention';
+@import 'slide_banner';
+@import 'responsiveslides';
+@import 'form_devise';
+@import 'contact_form';
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  font-size: 16px;
+}
+
+
+

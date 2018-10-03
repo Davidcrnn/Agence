@@ -1,0 +1,43 @@
+
+<div class="container-index">
+
+  <% @rentals.each do |rental| %>
+      <% if rental.visible === true %>
+  <div class="row hauteur">
+    <div class=" col-xs-12 border">
+
+
+        <div class="content-vente">
+          <div class="photo-vente">
+            <%= cl_image_tag rental.photos, height: 332, width: 400, crop: :fill %>
+          </div>
+
+          <div class="description-vente">
+            <div class="info-titre">
+            <h3><i class="fas fa-map-marker-alt"></i>   <%= rental.localisation.capitalize %></h3>
+            <h3><i class="fas fa-home"></i>   <%= rental.titre.capitalize %></h3>
+              <h3><i class="fas fa-euro-sign"></i> Loyer: <%= rental.price.to_i %>€</h3>
+             <h3><i class="fas fa-expand-arrows-alt"></i>   <%= rental.surface.to_i %>m²</h3>
+
+            </div>
+          <div class="description">
+            <p><%= rental.description %></p>
+          </div>
+        </div>
+
+           <div class="lien-vente">
+            <p><%= link_to "Voir l'annonce", rental_path(rental) %></p><br><br>
+          </div>
+            <div class="new-vente">
+            <% if user_signed_in? %>
+                <p><%= link_to "Nouvelle annonce", new_rental_path, class: "nouvelle" %></p>
+
+            <% end %>
+
+            </div>
+        </div>
+      </div>
+
+      <% end %>
+      <% end %>
+  </div>

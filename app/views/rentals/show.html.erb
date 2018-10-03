@@ -1,0 +1,103 @@
+<div class="wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="main-description">
+        <h1><%= @rental.titre.capitalize %></h1>
+      </div>
+
+     <% if @rental.pictures.present? %>
+
+    <div class="rslides_container">
+      <ul class="rslides" id="slider2">
+        <li><img src="<%= cl_image_path  @rental.photos, height: 400, width: 600, crop: :fill%>" alt=""></li>
+        <li><img src="<%= cl_image_path @rental.pictures[0].picture_url(:rentals_image)%>" alt=""></li>
+          <% if @rental.pictures[1].present? %>
+        <li><img src="<%= cl_image_path @rental.pictures[1].picture_url(:rentals_image)%>" alt=""></li>
+          <% end %>
+          <% if @rental.pictures[2].present? %>
+        <li><img src="<%= cl_image_path @rental.pictures[2].picture_url(:rentals_image)%>" alt=""></li>
+          <% end %>
+          <% if @rental.pictures[3].present? %>
+         <li><img src="<%= cl_image_path @rental.pictures[3].picture_url(:rentals_image)%>" alt=""></li>
+          <% end %>
+           <% if @rental.pictures[4].present? %>
+         <li><img src="<%= cl_image_path @rental.pictures[4].picture_url(:rentals_image)%>" alt=""></li>
+          <% end %>
+          <% if @rental.pictures[5].present? %>
+         <li><img src="<%= cl_image_path @rental.pictures[5].picture_url(:rentals_image)%>" alt=""></li>
+          <% end %>
+          <% if @rental.pictures[6].present? %>
+         <li><img src="<%= cl_image_path @rental.pictures[6].picture_url(:rentals_image)%>" alt=""></li>
+          <% end %>
+          <% if @rental.pictures[7].present? %>
+         <li><img src="<%= cl_image_path @rental.pictures[7].picture_url(:rentals_image)%>" alt=""></li>
+          <% end %>
+          <% if @rental.pictures[8].present? %>
+         <li><img src="<%= cl_image_path @rental.pictures[8].picture_url(:rentals_image)%>" alt=""></li>
+          <% end %>
+          <% if @rental.pictures[9].present? %>
+         <li><img src="<%= cl_image_path @rental.pictures[9].picture_url(:rentals_image)%>" alt=""></li>
+          <% end %>
+      </ul>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="description-show">
+        <div class="information-vente">
+          <ul>
+            <li><h1><%= @rental.titre.capitalize %></h1> </li>
+            <li><%= @rental.localisation %></li>
+            <li>Loyer: <%= @rental.price %>€/mois</li> <br>
+            <li><%= @rental.description %></li> <br>
+            <li>Surface: <%= @rental.surface %>m²</li>
+          </ul>
+          <div class="contact-vente">
+            <button type="button" class="contact-vente" data-toggle="modal" data-target="#exampleModal">Faire une visite</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+            <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h1>Agence du Louvre</h1>
+          <p><i class="far fa-compass"></i> 52 rue de l'Arbre Sec</p>
+          <p><i class="far fa-compass"></i> Paris - 75001</p>
+          <p><i class="far fa-address-book"></i> 01-40-20-90-00 / 06-07-03-61-62</p>
+          <p><i class="far fa-envelope"></i> <a href="mailto:ag.dulouvre@gmail.com" style="color: black;">ag.dulouvre@gmail.com</a> </p>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Revenir à l'annonce</button>
+        <button type="button" class="btn btn-secondary contact-modal"> <%= link_to "Contactez nous par email", new_contact_path   %></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <p><%= link_to "Retour aux annonces", rentals_path, class: "retour"  %></p>
+    <% if user_signed_in? %>
+  <p><%= link_to "Editer annonce", edit_rental_path(@rental), class: "edit" %></p>
+    <% end %>
+    </div>
+</div>
+
+<!-- Slide javascript code -->
+<script>
+$(function () {
+   $("#slider2").responsiveSlides({
+        auto: false,
+        pager: true,
+        nav: true,
+        speed: 500,
+        maxwidth: 800,
+        namespace: "transparent-btns"
+      });
+    });
+</script>
