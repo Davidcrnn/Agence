@@ -1,0 +1,58 @@
+ <div class="container contact-container">
+  <div class="row">
+  <h1>Estimation</h1>
+  <h5><em>Merci de renseigner le formulaire. Nous prendrons contact avec vous dans les meilleurs délais.</em></h5>
+  <%= simple_form_for @estimation, :html => {:class => 'form-horizontal' } do |f| %>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <%= f.input :nom, :required => true , :input_html => {:style=> 'width: 98%', :class => 'input-style'} %>
+    </div>
+       <div class="col-xs-12 col-md-6">
+
+    <%= f.input :email, :required => true, :input_html => {:style=> 'width: 98%',:class => 'input-style'} %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+    <%= f.input :ville, :input_html => {:style=> 'width: 98%',:class => 'input-style'} %>
+
+    </div>
+    <div class="col-xs-12 col-md-6">
+    <%= f.input :code_postal, :input_html => {:style=> 'width: 98%',:class => 'input-style'} %>
+
+    </div>
+  </div>
+  <div class="row col-xs-12 col-md-12">
+
+    <%= f.input :telephone, :required => true, :input_html => {:style=> 'width: 99%',:class => 'input-style'} %>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+    <%= f.input :type, collection: ["Appartement", "Maison", "Loft", "Local commercial", "Parking", "Autre"], :input_html => {:style=> 'width: 98%',:class => 'input-style'}%>
+
+    </div>
+    <div class="col-xs-12 col-md-6">
+    <%= f.input :nombre_de_pieces, collection: 1..12, :input_html => {:style=> 'width: 98%',:class => 'input-style'}  %>
+
+    </div>
+  </div>
+   <div class="row col-xs-12 col-md-12">
+    <%= f.input :surface_habitable, :input_html => {:style=> 'width: 99%',:class => 'input-style'} %>
+  </div>
+   <div class="row col-xs-12 col-md-12">
+
+    <%= f.input :message, :as => :text, :required => false, :input_html => {:rows => 10} ,:input_html => {:style=> 'width: 99%',:class => 'input-style'}%>
+  </div>
+    <div class="form-actions">
+    <div class="hidden">
+    <%= f.input :nickname %>
+    </div>
+      <%= f.button :submit, 'Envoyé', :class=> "button" %>
+      <br><br>
+      <p><em>*Les informations communiquées sont destinées à l'Agence immobilière éditrice de ce site. Vous bénéficiez d'un droit d'accès, de modification, de rectification et de suppression de vos données personnelles (Loi n°2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique). Pour les exercer, adressez-vous à l'adresse de l'Editeur.</em></p>
+    </div>
+  <% end %>
+
+  </div>
+
+</div>

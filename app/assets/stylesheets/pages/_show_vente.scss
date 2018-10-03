@@ -1,0 +1,110 @@
+.container-show {
+  background-color: rgba(220,220,220,0.2);
+  height: 100vh;
+  margin-top: 70px;
+}
+
+.description-show {
+  margin-bottom: 70px;
+  border-radius: 3px;
+  box-shadow: 1px 3px 1px #80808045;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+
+  ul {
+    list-style-type: none;
+    text-align: left;
+    padding: 20px 20px;
+}
+}
+
+.wrapper {
+  margin-top: 80px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  position: absolue;
+}
+
+.contact-vente {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  button {
+    border: 1px solid;
+    padding: 10px 15px;
+    background: #9d9d9dba;
+    color:white;
+    border-radius: 3px;
+  }
+}
+.contact-modal a {
+  color: black;
+
+}
+.delete {
+  text-decoration: underline;
+  color: black;
+  a {
+    color:black;
+  } &:hover {
+    color: black;
+    opacity: 0.5;
+  }
+}
+.edit {
+  position: fixed;
+  top: 110px;
+  left: 20px;
+  color: black;
+  text-decoration: underline;
+  a {
+    color: black;
+  } &:hover {
+    color: black;
+    opacity: 0.5;
+  }
+}
+.retour {
+  position: fixed;
+  top: 90px;
+  left: 20px;
+  color: black;
+  text-decoration: underline;
+  a {
+    color: black;
+  } &:hover {
+    color: black;
+    opacity: 0.5;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .descri {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 480px) {
+  .photo-vente img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+}
+
+.main-description {
+  align-items: left !important;
+}
+
+.information-vente {
+  width: 100%;
+  text-align: justify;
+}

@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+ def home
+    @sales = Sale.all
+    @rentals = Rental.all
+  end
 
-  def home
+  def mention
+    @sales =Sale.all
   end
 end

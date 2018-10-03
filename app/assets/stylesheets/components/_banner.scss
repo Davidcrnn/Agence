@@ -1,0 +1,71 @@
+.banner-container {
+  background-image : linear-gradient(rgba(164, 182, 199, 0.2), rgba(164, 182, 199, 0.2)), image-url("banner-min.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-slide {
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 70px);
+}
+
+.banner-content {
+  display: block;
+  text-align: center;
+  a {
+    font-size: 20px;
+  }
+}
+
+.agence-banner {
+  margin-bottom: 100px;
+  background-color: rgba(255, 252, 252, 0.6);
+  padding: 20px 20px;
+  color: rgba(0, 0, 0, 0.62);
+  h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 100px;
+    margin-bottom: 0
+  } h3 {
+    margin-top: 0;
+  }
+}
+
+.link-banner {
+  padding: 40px 40px;
+  display: flex;
+  h2 {
+    margin: 20px;
+  }
+}
+
+.btn-annonce-vente {
+  border: 2px solid white;
+  padding: 20px 30px;
+  border-radius: 3px;
+  color: white;
+  background: #86aac7db;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none;
+    color: white;
+  }
+}
+.btn-annonce-location {
+  border: 2px solid white;
+  padding: 20px 21px;
+  border-radius: 3px;
+  color: white;
+  background: #c3c3c3ed;
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none;
+    color: white;
+  }
+}

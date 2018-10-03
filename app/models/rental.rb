@@ -8,5 +8,5 @@ class Rental < ApplicationRecord
   validates :visible, inclusion: {in: [true, false] }
   has_many :pictures, :dependent => :destroy
   accepts_nested_attributes_for :pictures, allow_destroy: true
-  # mount_uploader :photos, PhotosUploader
+  mount_uploader :photos, PhotosUploader
 end

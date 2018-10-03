@@ -1,0 +1,46 @@
+
+<%= simple_form_for(@sale, :html => { multipart: true }) do |f| %>
+  <% if @sale.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
+
+      <ul>
+      <% @sale.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container-fluid form-container">
+  <div class="field">
+    <%= f.input :titre %>
+    <%= f.input :localisation %>
+    <%= f.input :description %>
+    <%= f.input :surface %>
+    <%= f.input :price, label: 'Prix' %>
+    <%= f.input :top, as: :select, default: true %>
+    <%= f.input :visible, as: :select %>
+    <%= f.input :photo, label: 'Photo principale' %>
+    <%= f.input :photo_cache, as: :hidden %>
+  </div>
+
+  <%= f.fields_for :image do |ff| %>
+    <div class="field">
+      <%= ff.label 'Photos secondaires' %><br>
+      <%= ff.file_field :image, multiple: true, name: "images[]" %>
+    </div>
+  <% end %>
+<br>
+  <div class="actions">
+    <%= f.submit value="Nouvelle Annonce", class: "btn-color"%>
+  </div>
+<% end %>
+
+<% if @sale.id %>
+  <% @sale.images.each do |image| %>
+    <%= image_tag image.image_url(:sales_image) %><br>
+    <%= link_to "Delete", image_path(image), :method => :delete,class: "delete" %><br>
+  <% end %>
+<% end %>
+
+  </div>

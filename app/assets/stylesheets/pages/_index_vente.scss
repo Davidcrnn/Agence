@@ -1,0 +1,140 @@
+
+.container-index {
+  background-color: rgba(220,220,220,0.2);
+  // height: 100vh;
+  margin-top: 70px;
+}
+
+// .card-vente {
+//   height: 500px;
+//   margin: O !important;
+
+// }
+.content-vente {
+  // height: 352px;
+  margin: 20px 20px;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  }
+
+.photo-vente {
+  flex: 1 1 0;
+  img {
+  padding: 20px 20px;
+  margin: 10px 20px;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.25);
+  background-size: cover;
+  background-position: center;
+
+}
+}
+
+.description-vente {
+  flex: 2 1 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+  background-color: white;
+  margin: 10px 20px;
+  padding: 20px 20px;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.25);
+
+}
+
+.info-titre h3 {
+  font-size: 16px;
+  padding: 10px;
+  color: rgb(101, 102, 101);;
+}
+
+
+.description p {
+  text-align: justify;
+  word-wrap: break-word;
+text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 200px;
+  max-width: 50ch;
+
+}
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.lien-vente {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+  padding: 30px 20px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.25);
+  background-color: white;
+  a {
+    border-radius: 3px;
+    padding: 20px 30px;
+    color: White;
+    background-color: rgba(0, 0, 0, 0.34);
+  }
+}
+
+// .hauteur {
+//   min-height: 80vh;
+// }
+.nouvelle {
+  position: fixed;
+    top: 75px;
+    left: 55px;
+    color: black;
+    text-decoration: underline;
+}
+
+.border { border-bottom: 1px solid #80808059;}
+// @media screen and (max-width: 600px) {
+//  .content-vente{
+//     flex-direction: column;
+// }
+// }
+@media only screen and (max-width: 1500px) {
+  .description {
+    display: none;
+  }
+
+}
+@media only screen and (max-width: 480px) {
+  .content-vente {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .lien-vente {
+    flex: 0;
+    margin: 0;
+    margin-top: 20px;
+    // padding: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .description-vente {
+    flex: 0;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .photo-vente {
+    flex: 0;
+    margin: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+  }
+}

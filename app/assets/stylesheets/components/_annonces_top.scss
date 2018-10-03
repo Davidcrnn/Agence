@@ -1,0 +1,135 @@
+.container-top-annonces {
+
+
+
+  // height: 400px;
+  margin: 70px 120px
+}
+
+.photo-top-index {
+  // padding: 20px;
+  // margin: 50px 100px;
+margin: 20px 14px;
+
+}
+
+.flipcard {
+  position: relative;
+  width: 300px;
+  height: 250px;
+  // perspective: 500px;
+}
+.flipcard.v:hover .front, .flipcard.v.flip .front{
+  transform: rotateX(180deg);
+}
+.flipcard.v:hover .back, .flipcard.v.flip .back{
+  transform: rotateX(0deg);
+}
+.flipcard.v .back{
+  transform: rotateX(-180deg);
+}
+.flipcard.h:hover .front, .flipcard.h.flip .front{
+  transform: rotateY(180deg);
+}
+.flipcard.h:hover .back, .flipcard.h.flip .back{
+  transform: rotateY(0deg);
+}
+.flipcard.h .back{
+  transform: rotateY(-180deg);
+}
+.flipcard .front, .flipcard .back
+{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in;
+  color: black;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.25);
+  // padding: 10px;
+  backface-visibility: hidden;
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0.9066001401) 0%, #e2e3e4 0%, rgba(188, 197, 199, 0.8337710084) 100%);
+  text-align: center;
+  padding: 20px 15px;
+  p {
+    font-size: 20px;
+  } a {
+    color: white;
+    border-radius: 3px;
+    padding: 10px 15px;
+    background-color: #acacac;
+  }
+}
+
+.front {
+  display: flex;
+  align-items: center;
+  justify-content: space-around
+}
+
+.description-top p {
+  border: 2px solid white;
+  padding: 15px;
+  background: rgba(128, 128, 128, 0.48);
+}
+
+.content-selection {
+  // height: 100px;
+  display: flex;
+  justify-content: center;
+  background: #86aac7db;
+  box-shadow: 0px 5px 13px #80808069;
+ h1 {
+  color: #F2F2F2;
+}
+}
+
+.content-selection-location {
+  // height: 100px;
+  display: flex;
+  justify-content: center;
+  background: #c3c3c3ed;
+  opacity: 0.7;
+  box-shadow: 0px 5px 13px #80808069;
+
+  h1 {
+  color: #F2F2F2;
+}
+}
+.agence {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center,
+}
+
+@media only screen and (max-width: 480px) {
+.agence {
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1500px) {
+  .photo-top-index {
+    margin: 20px 37px;
+  }
+
+}
+
+@media only screen and (max-width: 1500px) {
+  .container-top-annonces {
+    margin: 70px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .photo-top-index {
+    margin: 18px 7px;
+  }
+}

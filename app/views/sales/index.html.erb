@@ -1,0 +1,45 @@
+
+
+<div class="container-index">
+  <% @sales.each do |sale| %>
+  <div class="row hauteur">
+
+<div class="col-xs-12 border">
+
+
+
+        <div class="content-vente">
+          <div class="photo-vente">
+            <%= cl_image_tag sale.photo, height: 332, width: 400, crop: :fill %>
+          </div>
+
+          <div class="description-vente">
+            <div class="info-titre">
+              <h3><i class="fas fa-map-marker-alt"></i>   <%= sale.localisation.capitalize %></h3>
+              <h3><i class="fas fa-home"></i>   <%= sale.titre.capitalize %></h3>
+              <h3><i class="fas fa-euro-sign"></i>Prix: <%= sale.price.capitalize %>€</h3>
+              <h3><i class="fas fa-expand-arrows-alt"></i>Surface: <%= sale.surface.capitalize %>m²</h3>
+            </div>
+
+            <div class="description">
+              <p><%= sale.description %></p>
+            </div>
+          </div>
+
+          <div class="lien-vente">
+            <p><%= link_to "Voir l'annonce", sale_path(sale) %></p><br><br>
+          </div>
+            <div class="new-vente">
+            <% if user_signed_in? %>
+                <p><%= link_to "Nouvelle annonce", new_sale_path, class: "nouvelle" %></p>
+            <% end %>
+            </div>
+        </div>
+
+</div>
+
+  </div>
+      <% end %>
+</div>
+
+
