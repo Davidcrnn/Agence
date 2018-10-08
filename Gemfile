@@ -12,6 +12,7 @@ gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'cloudinary'
+# gem 'coffee-rails', '~> 4.1.0'
 
 
 gem 'autoprefixer-rails'
