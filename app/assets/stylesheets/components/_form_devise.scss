@@ -10,9 +10,10 @@
 }
 
 .center-container {
-  display: block;
+  display: flex;
   text-align: center;
   justify-content: center;
+  height: 75vh;
 }
 
 body{width:100%;margin:auto;min-width:600px;max-width:2000px}
