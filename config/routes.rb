@@ -16,7 +16,7 @@ end
   resources :sales
   resources :contacts, only: [:new, :create]
   resources :images, only: [:destroy]
-  #resources :pictures, only: [:destroy]
+  resources :pictures, only: [:destroy]
   resources :estimations, only: [:new, :create]
   get '/mentions' => 'pages#mention'
 
