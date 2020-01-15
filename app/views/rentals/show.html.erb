@@ -5,12 +5,13 @@
         <h1><%= @rental.titre.capitalize %></h1>
       </div>
 
-     <% if @rental.pictures.present? %>
 
     <div class="rslides_container">
       <ul class="rslides" id="slider2">
         <li><img src="<%= cl_image_path  @rental.photos, height: 400, width: 600, crop: :fill%>" alt=""></li>
+        <% if @rental.pictures[0].present? %>
         <li><img src="<%= cl_image_path @rental.pictures[0].picture_url(:rentals_image)%>" alt=""></li>
+        <% end %>
           <% if @rental.pictures[1].present? %>
         <li><img src="<%= cl_image_path @rental.pictures[1].picture_url(:rentals_image)%>" alt=""></li>
           <% end %>

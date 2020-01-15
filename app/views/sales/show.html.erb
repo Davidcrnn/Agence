@@ -5,13 +5,15 @@
           <div class="main-description">
             <h1><%= @sale.titre.capitalize %></h1>
           </div>
-          <% if @sale.images.present? %>
+
 
 
           <div class="rslides_container">
             <ul class="rslides" id="slider2">
               <li><img src="<%= cl_image_path  @sale.photo, height: 400, width: 600, crop: :fill%>" alt=""></li>
+              <% if @sale.images[1].present? %>
               <li><img src="<%= cl_image_path @sale.images[0].image_url(:sales_image)%>" alt=""></li>
+              <% end %>
               <% if @sale.images[1].present? %>
               <li><img src="<%= cl_image_path @sale.images[1].image_url(:sales_image)%>" alt=""></li>
               <% end %>
@@ -41,7 +43,7 @@
               <% end %>
             </ul>
           </div>
-          <% end %>
+
         </div>
       </div>
     <div class="container descri">
