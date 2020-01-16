@@ -2,11 +2,13 @@
   background-image : linear-gradient(rgba(164, 182, 199, 0.2), rgba(164, 182, 199, 0.2)), image-url("banner-min.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: calc(100vh - 70px);
-  margin-top: 70px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 90px 70px 70px;
 }
 .banner-slide {
   background-size: cover;
@@ -67,5 +69,17 @@
     opacity: 0.8;
     text-decoration: none;
     color: white;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .banner-container {
+    margin: 90px 20px 0 20px;
+  }
+  .link-banner {
+    display: block;
+  }
+  .link-banner h2 {
+    margin: 50px 0 50px 0;
   }
 }

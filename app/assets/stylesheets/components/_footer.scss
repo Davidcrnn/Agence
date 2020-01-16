@@ -3,7 +3,7 @@
   border-bottom: 1px solid #a29e9e61;
   background: rgb(198,199,200);
   background: linear-gradient(90deg, rgba(198,199,200,0.8211659663865546) 0%, rgba(194,196,198,0.9528186274509804) 26%, rgba(145,147,148,0.7903536414565826) 100%);
-  font-family: 'Cormorant Garamond', serif;
+
   line-height: 1.2;
   h1 {
     font-size: 26px;
@@ -11,36 +11,51 @@
 }
 
 .services-footer {
+  text-align: center;
   ul {
   list-style-type: none;
   } a {
     color: black;
+    font-size: 14px;
   }
 }
 
 
-.presentation-agence-footer a {
+.presentation-agence-footer {
+  text-align: center;
+  a {
   color: black;
+  font-size: 14px;
 }
-
+}
+.presentation-agence-footer p {
+  color: black;
+  font-size: 14px;
+}
 
 .link-footer {
   margin-top: 0;
+  text-align: center;
   ul {
   list-style-type: none;
   } a {
     color: black;
+    font-size: 14px;
   } p {
     margin-bottom: 6px;
+    font-size: 14px;
   }
 }
 
 .footer-bottom {
+
   display: flex;
   justify-content: center;
   background: rgb(198,199,200);
 background: linear-gradient(90deg, rgba(198,199,200,0.8211659663865546) 0%, rgba(194,196,198,0.9528186274509804) 26%, rgba(145,147,148,0.7903536414565826) 100%);
-}
+  h4{
+    font-size: 16px;
+  }}
 
 .alignement {
   display: flex;

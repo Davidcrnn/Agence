@@ -4,9 +4,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Italianno|Pinyon+Script');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300&display=swap');
 // Define fonts for body and headers
-$body-font: 'Cormorant Garamond', serif;
-$headers-font: 'Cormorant Garamond', serif;
+$body-font: 'Montserrat', sans-serif;
+$headers-font: 'Montserrat', sans-serif;
+// $headers-font: 'Cormorant Garamond', serif;
 
 
 

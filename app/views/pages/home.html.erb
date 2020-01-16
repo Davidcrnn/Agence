@@ -12,90 +12,85 @@
     </div>
   </div>
 </div>
-
-    <div class="agence-container">
-      <div class="row alignement-description">
-
-
-      <div class="col-xs-12  col-md-4 agence-titre-logo">
-        <h1>Agence du Louvre</h1>
-        <br>
-
-          <p><i class="far fa-compass"></i> 52 rue de l'Arbre Sec</p>
-          <p><i class="far fa-compass"></i> Paris - 75001</p>
-          <p><i class="far fa-address-book"></i> 01-40-20-90-00 / 06-07-03-61-62</p>
-          <p><i class="far fa-envelope"></i> <a href="mailto:ag.dulouvre@gmail.com">ag.dulouvre@gmail.com</a> </p>
-
-
+    <div class="container">
+      <div class="agence-container">
+        <div class="row alignement-description">
+          <div class="col-xs-12  col-md-4 agence-titre-logo">
+            <h1>Agence du Louvre</h1>
+            <br>
+            <p><i class="far fa-compass"></i> 52 rue de l'Arbre Sec</p>
+            <p><i class="far fa-compass"></i> Paris - 75001</p>
+            <p><i class="far fa-address-book"></i> 01-40-20-90-00 / 06-07-03-61-62</p>
+            <p><i class="far fa-envelope"></i> <a href="mailto:ag.dulouvre@gmail.com">ag.dulouvre@gmail.com</a> </p>
+          </div>
+          <div class="col-xs-12  col-md-4 agence-histoire">
+            <p> Située au cœur de Paris, l’Agence du Louvre est fondée en 1995 par Geneviève Bastien. Forte d’une expérience de plus d’une vingtaine d’années, l’Agence du Louvre est devenue incontournable dans la recherche de biens immobiliers d’exceptions dans les 1er et 2ème arrondissements de Paris. <br><br>
+             Qu’il s’agisse d’une recherche d’appartement familial ou d’un pied-à-terre, l’Agence du Louvre propose ses services tant pour l’achat et la vente que la location, la location saisonnière ainsi que l’estimation de biens. <br><br>
+            L’Agence est ouverte tous les jours de 9h à 20h sauf le dimanche.
+            </p>
+          </div>
+          <div class="col-xs-12  col-md-4 agence-horaires hidden-xs hidden-sm" >
+            <%= cl_image_tag("Capture_d_écran_2018-05-14_à_13.40.42.png", :effect=>"saturation:-75", :height=>250, :width=>360, :crop=>"fill") %>
+            <a href="https://www.google.fr/maps/place/52+Rue+de+l'Arbre+Sec,+75001+Paris/@48.8609185,2.3404709,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e2185ea3629:0x5b5f6fee59a5402e!8m2!3d48.8609185!4d2.3426596">Venez nous rendre visite</a>
+          </div>
+        </div>
       </div>
 
+          <div class="content-selection">
+            <h1>Annonces - Ventes</h1>
+          </div>
 
-       <div class="col-xs-12  col-md-4 agence-histoire">
-        <br>
-        <p> Située au cœur de Paris, l’Agence du Louvre est fondée en 1995 par Geneviève Bastien. Forte d’une expérience de plus d’une vingtaine d’années, l’Agence du Louvre est devenue incontournable dans la recherche de biens immobiliers d’exceptions dans les 1er et 2ème arrondissements de Paris. Qu’il s’agisse d’une recherche d’appartement familial ou d’un pied-à-terre, l’Agence du Louvre propose ses services tant pour l’achat et la vente que la location, la location saisonnière ainsi que l’estimation de biens.
-          <br> <br>
+          <div class=" row">
+            <% @sales.each do |sale| %>
+            <% if sale.top === true && sale.visible === true %>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="photo-top-index flipcard h">
+                <div class="front description-top responsive-top" style="background-image: url('<%= cl_image_path sale.photo, crop: :fill %>'); background-position: center; background-size: cover;">
+                </div>
 
-L’Agence est ouverte tous les jours de 9h à 20h sauf le dimanche.
-<br><br>
-         </p>
+                <div class="back">
+                  <p><%= sale.titre.capitalize %></p>
+                  <p>Prix: <%= sale.price %>€</p>
+                  <p>Surface: <%= sale.surface %>m²</p>
+                  <h3><%= link_to "Voir l'annonce", sale_path(sale)  %></h3>
+                </div>
+              </div>
+            </div>
+            <% end %>
+            <% end %>
+          </div>
+
+
+
+
+
+
+
+  <div class="content-selection-location">
+      <h1>Annonces - Location</h1>
+    </div>
+
+  <div class="row">
+    <% @rentals.each do |rental| %>
+    <% if rental.top === true && rental.visible === true %>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="photo-top-index flipcard h">
+        <div class="front description-top responsive-top" style="background-image: url('<%= cl_image_path rental.photos, crop: :fill %>'); background-position: center;
+      background-size: cover;">
       </div>
-      <div class="col-xs-12  col-md-4 agence-horaires hidden-xs hidden-sm">
-        <%= cl_image_tag("Capture_d_écran_2018-05-14_à_13.40.42.png", :effect=>"saturation:-75", :height=>250, :width=>360, :crop=>"fill") %>
+
+      <div class="back">
+        <p><%= rental.titre.capitalize %></p>
+        <p>Loyer: <%= rental.price %>€/mois</p>
+        <p>Surface: <%= rental.surface %>m²</p>
+        <h3><%= link_to "Voir l'annonce", rental_path(rental)  %></h3>
       </div>
-    </div>
-</div>
 
-
-  <div class="content-selection">
-    <h1>Ventes: Sélection</h1>
-  </div>
-
-<div class="container-top-annonces">
-  <div class="agence">
-  <% @sales.each do |sale| %>
-  <% if sale.top === true && sale.visible === true %>
-    <div class="photo-top-index flipcard h">
-      <div class="front description-top responsive-top" style="background-image: url('<%= cl_image_path sale.photo, height: 332, width: 300, crop: :fill %>')">
-    </div>
-
-    <div class="back">
-      <p><%= sale.titre.capitalize %></p>
-      <p>Prix: <%= sale.price %>€</p>
-      <p>Surface: <%= sale.surface %>m²</p>
-      <h3><%= link_to "Voir l'annonce", sale_path(sale)  %></h3>
     </div>
 
   </div>
-  <% else %>
-  <% end %>
-  <% end %>
-</div>
-</div>
-
-
-
-<div class="content-selection-location">
-    <h1>Locations: Sélection</h1>
+    <% end %>
+    <% end %>
   </div>
-
-<div class="container-top-annonces">
-  <div class="agence">
-  <% @rentals.each do |rental| %>
-  <% if rental.top === true && rental.visible %>
-    <div class="photo-top-index flipcard h">
-      <div class="front description-top responsive-top" style="background-image: url('<%= cl_image_path rental.photos, height: 332, width: 300, crop: :fill %>')">
     </div>
 
-    <div class="back">
-      <p><%= rental.titre.capitalize %></p>
-      <p>Loyer: <%= rental.price %>€/mois</p>
-      <p>Surface: <%= rental.surface %>m²</p>
-      <h3><%= link_to "Voir l'annonce", rental_path(rental)  %></h3>
-    </div>
-
-  </div>
-  <% else %>
-  <% end %>
-  <% end %>
-</div>
-</div>
