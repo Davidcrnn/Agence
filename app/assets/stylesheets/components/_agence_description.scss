@@ -1,18 +1,17 @@
 .agence-container {
   width: 100%;
-      margin: 40px auto;
+
   padding: 0px 30px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: 'Cormorant Garamond', serif;
   flex-wrap: wrap;
 
 }
 
 .agence-titre-logo {
       padding: 40px 20px;
-  // width: 18%;
+
   h1 {
     font-family: 'Tangerine', cursive;
     margin: 0;
@@ -29,7 +28,18 @@
 
 .agence-horaires {
   padding: 40px 20px;
-  // width: 20%;
+  a {
+    color: white;
+    padding: 20px 30px;
+    background-color: #c5c5c4;
+
+  } a:hover {
+      text-decoration: none;
+      opacity: 0.7;
+    }
+  img {
+    margin-bottom: 30px;
+  }
 }
 
 .agence-histoire {
@@ -41,7 +51,7 @@
 }
 
 .alignement-description {
-  // display: flex;
+
   text-align: center;
 }
 

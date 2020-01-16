@@ -1,54 +1,53 @@
 
 .container-index {
   background-color: rgba(220,220,220,0.2);
-  min-height: 75vh;
-  margin-top: 70px;
+
+  padding-top: 100px;
 }
 
 .container-index-visible {
   background-color: rgba(220,220,220,0.2);
   margin-top: 70px;
 }
-// .card-vente {
-//   height: 500px;
-//   margin: O !important;
 
-// }
-.content-vente {
-  // height: 352px;
-  margin: 20px 20px;
+// .content-vente {
+//   // height: 352px;
+//   margin: 20px 20px;
 
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  }
+//   display: flex;
+//   justify-content: space-around;
+//   flex-wrap: wrap;
+//   }
 
 .photo-vente {
-  flex: 1 1 0;
-  img {
+  height: 300px;
+  width: auto;
   padding: 20px 20px;
-  margin: 10px 20px;
+
   border-radius: 3px;
-  background-color: white;
+
   box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.25);
   background-size: cover;
   background-position: center;
 
 }
-}
 
-.description-vente {
-  flex: 2 1 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 3px;
-  background-color: white;
-  margin: 10px 20px;
-  padding: 20px 20px;
-  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.25);
-
+.mb-4 {
+  padding: 20px 0;
+  border-bottom: 1px solid #80808059;
 }
+// .description-vente {
+//   flex: 2 1 0;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   border-radius: 3px;
+//   background-color: white;
+//   margin: 10px 20px;
+//   padding: 20px 20px;
+//   box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.25);
+
+// }
 
 .info-titre h3 {
   font-size: 16px;
@@ -66,38 +65,35 @@ text-overflow: ellipsis;
   max-width: 50ch;
 
 }
-.row {
-    margin-right: 0px;
-    margin-left: 0px;
-}
+
 .lien-vente {
-  flex: 1 1 0;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 20px;
-  padding: 30px 20px;
   border-radius: 3px;
-  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.25);
-  background-color: white;
+
   a {
     border-radius: 3px;
     padding: 20px 30px;
     color: White;
     background-color: rgba(0, 0, 0, 0.34);
+  } a:hover {
+    text-decoration: none;
+    opacity: 0.5;
   }
 }
 
-// .hauteur {
-//   min-height: 80vh;
-// }
 .nouvelle {
-  position: fixed;
-    top: 75px;
-    left: 55px;
-    color: black;
-    text-decoration: underline;
+  height: 50px;
+a {
+  margin: 10px;
+  padding: 10px;
+    color: white;
+  background-color: #154815;
 
+
+}
 
 }
 

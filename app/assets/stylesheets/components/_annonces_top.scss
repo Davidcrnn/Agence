@@ -15,8 +15,8 @@ margin: 20px 14px;
 
 .flipcard {
   position: relative;
-  width: 300px;
-  height: 250px;
+  width: auto;
+  height: 300px;
   // perspective: 500px;
 }
 .flipcard.v:hover .front, .flipcard.v.flip .front{
@@ -55,6 +55,7 @@ margin: 20px 14px;
   flex-direction: column;
   background: linear-gradient(90deg, rgba(2, 0, 36, 0.9066001401) 0%, #e2e3e4 0%, rgba(188, 197, 199, 0.8337710084) 100%);
   text-align: center;
+  align-items: center;
   padding: 20px 15px;
   p {
     font-size: 20px;
@@ -87,6 +88,7 @@ margin: 20px 14px;
  h1 {
   color: #F2F2F2;
   margin: 20px 0;
+  font-size: 30px;
 }
 }
 
@@ -101,6 +103,7 @@ margin: 20px 14px;
   h1 {
   color: #F2F2F2;
   margin: 20px 0;
+  font-size: 30px;
 }
 }
 .agence {
